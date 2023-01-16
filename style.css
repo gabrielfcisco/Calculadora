@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 5% 5%;
+
+}
+
+.calculator {
+    background-color: black;
+    font-family: 'Khand', sans-serif;
+    color: aliceblue;
+    border-radius: 20px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.display {
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 122px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.buttons .zero {
+    grid-column: span 2;
+}
+
+.calculator button {
+    font-family: 'Khand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 61px;
+    color: white;
+    background: #292929;
+    width: auto;
+    height: 77px;
+    border-radius: 16px;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+button:hover{
+    background-color: #FBAB18;
+    color: black;
+}
