@@ -65,7 +65,11 @@ body {
     border: 2px solid black;
 }
 
-button:hover{
+.buttons .operador {
+    color: #FBAB18;
+}
+
+button:hover {
     background-color: #FBAB18;
-    color: black;
+    color: black !important;
 }
