@@ -66,5 +66,55 @@ document.getElementById('AC').addEventListener('click', () => {
     display.textContent = '';
     operator = undefined;
     newNumber = true;
-    numeroAnterior = undefined;
-})
+    previousNumber = undefined;
+});
+
+document.getElementById('<<').addEventListener('click', () => {
+    display.textContent = display.textContent.slice(0, -1);
+});
+
+document.getElementById('±').addEventListener('click', () => {
+    newNumber = true;
+    atualizeDisplay(display.textContent * -1);
+});
+
+document.getElementById('ponto').addEventListener('click', () => {
+    if (display.textContent.indexOf('.') == -1) {
+        if (display.textContent.length > 0) {
+            atualizeDisplay('.');
+        } else {
+            atualizeDisplay('0.');
+        }
+    }
+});
+
+const mapKeyboard = {
+    '0' : 'tecla0',
+    '1' : 'tecla1',
+    '2' : 'tecla2',
+    '3' : 'tecla3',
+    '4' : 'tecla4',
+    '5' : 'tecla5',
+    '6' : 'tecla6',
+    '7' : 'tecla7',
+    '8' : 'tecla8',
+    '9' : 'tecla9',
+    'Backspace' : '<<',
+    'Delete' : 'AC',
+    '+' : 'operador-mais',
+    '-' : 'operador-menos',    
+    '*' : 'operador-vezes',
+    '/' : 'operador-divisao',
+    '.' : 'ponto',
+    ',' : 'ponto',
+    '=' : 'igual',
+    'Enter' : 'igual',
+};
+
+document.addEventListener('keydown', (event) => {
+    const key = event.key
+
+    if(Object.keys(mapKeyboard).indexOf(key) !== -1) {
+    document.getElementById(mapKeyboard[key]).click();
+    }
+});

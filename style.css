@@ -11,38 +11,57 @@ body {
 
 }
 
+
 .calculator {
+
+    z-index: -20;
     background-color: black;
     font-family: 'Khand', sans-serif;
     color: aliceblue;
     border-radius: 20px;
-    width: 400px;
+    width: 50%;
+    height: 100%;
     margin: 0 auto;
-    padding: 20px;
+
+}
+
+.keyboard-background {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 79%;
+    bottom: 0;
+    left:0;
+    background: #1F1F1F;
+    border-radius: 32px 32px 20px 20px;
 }
 
 .display {
     font-weight: 600;
     font-size: 80px;
-    line-height: 122px;
+    line-height: 110px;
     text-align: right;
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    height: 100px;
+    height: 15vw;
     margin-bottom: 20px;
     padding: 15px;
     background-color: black;
     color: white;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 20px;
+    padding: 20px;
 
 }
 
 .buttons {
+    background: #1F1F1F;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
+    padding: 20px;
+    border-radius: 32px 32px 20px 20px;;
 }
 
 .buttons .zero {
@@ -62,7 +81,7 @@ body {
     border-radius: 16px;
     outline: none;
     cursor: pointer;
-    border: 2px solid black;
+    border: 2px;
 }
 
 .buttons .operador {
