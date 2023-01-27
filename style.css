@@ -104,10 +104,9 @@ button:hover {
 
     .buttons{
         height: 70vh;
-        border-radius: 32px 32px 0px 0px;
+        border-radius: 45px 45px 0px 0px;
         grid-gap: 40px;
-        padding: 40px;
-        padding-top: 60px;
+        padding: 50px;
     }
 
     .calculator button{
@@ -140,8 +139,9 @@ button:hover {
 
     .buttons{
         height: 70vh;
-        border-radius: 32px 32px 0px 0px;
+        border-radius: 38px 38px 0px 0px;
         grid-gap: 15px;
+        padding: 20px;
     }
 
     .calculator button{

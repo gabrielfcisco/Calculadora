@@ -30,7 +30,7 @@ const calculate = () => {
                 atualizeDisplay(previousNumber * atualNumber);
                 break;
             case '÷':
-                atualizeDisplay(previousNumber / atualNumber);
+                atualizeDisplay(parseFloat((previousNumber / atualNumber).toFixed(6)));
                 break;
         }
     }
@@ -89,32 +89,32 @@ document.getElementById('ponto').addEventListener('click', () => {
 });
 
 const mapKeyboard = {
-    '0' : 'tecla0',
-    '1' : 'tecla1',
-    '2' : 'tecla2',
-    '3' : 'tecla3',
-    '4' : 'tecla4',
-    '5' : 'tecla5',
-    '6' : 'tecla6',
-    '7' : 'tecla7',
-    '8' : 'tecla8',
-    '9' : 'tecla9',
-    'Backspace' : '<<',
-    'Delete' : 'AC',
-    '+' : 'operador-mais',
-    '-' : 'operador-menos',    
-    '*' : 'operador-vezes',
-    '/' : 'operador-divisao',
-    '.' : 'ponto',
-    ',' : 'ponto',
-    '=' : 'igual',
-    'Enter' : 'igual',
+    '0': 'tecla0',
+    '1': 'tecla1',
+    '2': 'tecla2',
+    '3': 'tecla3',
+    '4': 'tecla4',
+    '5': 'tecla5',
+    '6': 'tecla6',
+    '7': 'tecla7',
+    '8': 'tecla8',
+    '9': 'tecla9',
+    'Backspace': '<<',
+    'Delete': 'AC',
+    '+': 'operador-mais',
+    '-': 'operador-menos',
+    '*': 'operador-vezes',
+    '/': 'operador-divisao',
+    '.': 'ponto',
+    ',': 'ponto',
+    '=': 'igual',
+    'Enter': 'igual',
 };
 
 document.addEventListener('keydown', (event) => {
     const key = event.key
 
-    if(Object.keys(mapKeyboard).indexOf(key) !== -1) {
-    document.getElementById(mapKeyboard[key]).click();
+    if (Object.keys(mapKeyboard).indexOf(key) !== -1) {
+        document.getElementById(mapKeyboard[key]).click();
     }
 });
